@@ -1,38 +1,33 @@
 import { useState } from 'react'
-import classes from './Form.module.scss'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { FormControl, FormBlock, FormField, FormLabel, FormWrapper } from './Form.styled'
+import plusIcon from '../../assets/images/plus.png'
 
 export const Form = (props: {createNewToDo: Function}) => {
 
     const [text,setText] = useState<string>('')
 
-    const formSubmit = () => {
+    const formSubmit = (event: React.SyntheticEvent) => {
+        event.preventDefault()
         if (text) {
             props.createNewToDo(text)
-            toast("Задача добавлена!")
             setText('')
         }
     }
 
     return (
         
-        <div className={classes.wrapper}>
-            <form action="#" onSubmit = {formSubmit}>
-                <label>
-                    <input 
+        <FormWrapper>
+            <FormBlock action="#" onSubmit = {formSubmit}>
+                <FormLabel>
+                    <FormField 
                       value={text}
-                      className={classes.formInput}
                       onChange={(e)=>setText(e.target.value)}
                       type="text" />
                     <div>
-                        <button 
-                        className={classes.formBtn}>
-                        </button>
+                        <FormControl icon = {plusIcon}/>
                     </div>
-                </label>
-            </form>
-            <ToastContainer position='bottom-right'/>
-        </div>
+                </FormLabel>
+            </FormBlock>
+        </FormWrapper>
     )
 }
