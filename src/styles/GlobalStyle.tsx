@@ -30,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
         transform: translate(-50%, -50%);
         text-align: center;
         color: #fff;
-        background: linear-gradient(45deg, #FF0080, #FF8C00);
+        background: linear-gradient(45deg, #0e5fc9, #ff2a04);
         overflow: hidden;
         width: 100%;
         height: 100%;
