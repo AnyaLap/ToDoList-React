@@ -5,10 +5,10 @@ export const ListItem = ({todo}: {todo: ToDo}) => {
     return (
 
         <ListItemLink 
-        color={todo.isDone ? 'green' : 'red'} 
+        color={todo.isDone ? 'white' : 'blueviolet'} 
         rel="noreferrer"
         target="_blank"
-        href={`/app/list/${todo.id}`}
+        href={`/todo/list/${todo.id}`}
         >
             {todo.text}
         </ListItemLink>

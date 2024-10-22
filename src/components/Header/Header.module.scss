@@ -4,7 +4,7 @@
     right: 0;
     left: 0;
     height: 50px;
-    background-color: #4682b4;
+    background-color: #a672cf;
     display: flex;
     align-items: center;
 }
@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .link {
@@ -26,4 +27,19 @@
 
 .active {
     color: #ffffff33;
+}
+.toggleButtonBlock {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.toggleButton {
+    border: none;
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+.toggleImg {
+    width: 30px;
 }

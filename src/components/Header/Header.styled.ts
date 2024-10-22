@@ -7,7 +7,7 @@ export const HeaderWrapper = styled.header`
     right: 0;
     left: 0;
     height: 50px;
-    background-color: #4682b4;
+    background-color: #a672cf;
     display: flex;
     align-items: center;
 `

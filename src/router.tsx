@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom"
 import { Layout } from "./layout/Layout"
 import { ViewList } from "./pages/ViewList"
 import {ViewListItem } from "./pages/ViewListItem"
-import { NotFound } from "./pages/NotFound"
 import { ToDoListPage } from "./pages/ToDoListPage"
+import { NotFound } from "./pages/404/404"
 
 export const router = createBrowserRouter([
   
@@ -21,5 +21,4 @@ export const router = createBrowserRouter([
       path: '*',
       element: <NotFound />,
     }
-])
-//   ] ,{basename: '/app/' } )
+] ,{basename: '/todo' } )
